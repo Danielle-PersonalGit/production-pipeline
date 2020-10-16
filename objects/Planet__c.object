@@ -154,6 +154,42 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Galaxy__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Galaxy</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Milky Way</fullName>
+                    <default>false</default>
+                    <label>Milky Way</label>
+                </value>
+                <value>
+                    <fullName>Eye of Sauron</fullName>
+                    <default>false</default>
+                    <label>Eye of Sauron</label>
+                </value>
+                <value>
+                    <fullName>Andromeda Galaxy</fullName>
+                    <default>false</default>
+                    <label>Andromeda Galaxy</label>
+                </value>
+                <value>
+                    <fullName>Cigar Galaxy</fullName>
+                    <default>false</default>
+                    <label>Cigar Galaxy</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
     <label>Planet</label>
     <nameField>
         <label>Planet Name</label>
