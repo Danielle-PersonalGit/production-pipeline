@@ -197,6 +197,38 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Planets</pluralLabel>
+    <recordTypes>
+        <fullName>Gas_Giants</fullName>
+        <active>true</active>
+        <label>Gas Giants</label>
+        <picklistValues>
+            <picklist>Galaxy__c</picklist>
+            <values>
+                <fullName>Andromeda Galaxy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cigar Galaxy</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Terrestrial_Plants</fullName>
+        <active>true</active>
+        <label>Terrestrial Plants</label>
+        <picklistValues>
+            <picklist>Galaxy__c</picklist>
+            <values>
+                <fullName>Eye of Sauron</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Milky Way</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
     <searchLayouts />
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
