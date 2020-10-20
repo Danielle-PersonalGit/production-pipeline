@@ -16,6 +16,14 @@
         <object>Planet__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
+    <recordTypeVisibilities>
+        <recordType>Planet__c.Gas_Giants</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Planet__c.Terrestrial_Plants</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
     <tabSettings>
         <tab>Planet__c</tab>
         <visibility>Visible</visibility>
