@@ -4476,11 +4476,6 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Planet__c.Distance_to_Earth__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Planet__c.Distance_to_Sun__c</field>
         <readable>true</readable>
