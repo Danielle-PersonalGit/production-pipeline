@@ -2,7 +2,7 @@
 Resource                      ../resources/common.robot
 Suite Setup                   Setup Browser
 Suite Teardown                End suite
-
+Library                        QVision
 
 *** Test Cases ***
 Entering A Lead
@@ -12,7 +12,7 @@ Entering A Lead
 
     ClickText                 Leads
     VerifyText                Change Owner
-    ClickText                 New
+    ClickText                 New                        timeout=30
     VerifyText                Lead Information
     UseModal                  On                          # Only find fields from open modal dialog
 
@@ -31,7 +31,7 @@ Entering A Lead
     UseModal                  Off
     Sleep                     1
     
-    ClickText                 Details
+    ClickText                 Details                     anchor=Activity
     VerifyField               Name                        Ms. Tina Smith
     VerifyField               Lead Status                 New
     VerifyField               Phone                       +12234567858449
@@ -58,3 +58,34 @@ Delete Tina Smith's Lead
     ClickText                    Delete
     ClickText                    Close
     VerifyNoText                 Tina Smith
+
+New Acccount
+    Appstate                     Sales App
+    ClickText                    Accounts
+    ClickText                    New
+    UseModal                     On
+    TypeText                     Account Name            GrowMore
+    PickList                     Type                    Customer
+    ClickText                    Shipping Country
+    ClickText                    Phone
+    TypeText                     Phone                   5555555432
+    PickList                     Industry                Agriculture
+    ClickText                    Save                    partial_match=False
+    UseModal                     Off
+    ClickText                    Details                 anchor=Related
+    VerifyField                  Phone                   (555) 555-5432
+    VerifyField                  Type                    Customer
+
+New Contact
+    Appstate                     Sales App
+    ClickText                    Contacts                anchor=Account
+    ClickText                    New
+    UseModal                     On
+    PickList                     Salutation              Ms.
+    ClickText                    First Name
+    TypeText                     First Name              Tina
+    TypeText                     Last Name               Smith
+    ClickText                    Account Name
+    QVision.TypeText             Search Accounts...      GrowMore
+    ClickText                    Save                    anchor=SaveEdit
+    UseModal                     Off
